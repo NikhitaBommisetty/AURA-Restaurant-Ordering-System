@@ -1,26 +1,33 @@
 # 🍽️ AURA Restaurant Ordering System
 
-A cloud-based restaurant ordering and management system built using **HTML**, **CSS**, and **JavaScript**, and deployed on **Amazon Web Services (AWS)**. The application leverages **Amazon S3**, **AWS Lambda**, **Amazon API Gateway**, and **Amazon DynamoDB** to provide a scalable, serverless solution for restaurant operations.
+A cloud-based restaurant ordering and management system built using **HTML**, **CSS**, and **JavaScript**, and deployed on **Amazon Web Services (AWS)**. The application utilizes **Amazon S3**, **AWS Lambda**, **Amazon API Gateway**, and **Amazon DynamoDB** to deliver a scalable, serverless solution for restaurant operations.
+
+---
+
+## 🌐 Live Demo
+
+**Website:**  
+http://aura-restaurant-website-123-978557329643-ap-south-1-an.s3-website.ap-south-1.amazonaws.com/index.html
 
 ---
 
 ## 📖 Overview
 
-AURA is a role-based restaurant management application designed to simplify the ordering process and improve operational efficiency. The system enables customers to place orders while providing dedicated interfaces for restaurant staff to manage orders, billing, and administrative tasks.
+AURA is a role-based restaurant management system designed to streamline restaurant operations through a cloud-native architecture. The application provides dedicated interfaces for customers, chefs, waiters, billing staff, and administrators, enabling efficient order management and processing.
 
-The project demonstrates the use of AWS serverless services to build and deploy a cloud-native web application.
+The project demonstrates the integration of multiple AWS services to build and deploy a serverless web application.
 
 ---
 
 ## ✨ Features
 
 - 🍽️ Customer ordering interface
-- 👨‍🍳 Chef dashboard for order management
-- 🧾 Billing system
+- 👨‍🍳 Chef dashboard
+- 🍴 Waiter dashboard
+- 🧾 Billing management
 - 👨‍💼 Administrator dashboard
-- 🍴 Waiter interface
 - 🌐 Online and offline ordering modes
-- ☁️ Serverless deployment on AWS
+- ☁️ Serverless cloud deployment
 - 📱 Responsive web interface
 
 ---
@@ -35,7 +42,38 @@ The project demonstrates the use of AWS serverless services to build and deploy 
 | Backend | AWS Lambda |
 | API Management | Amazon API Gateway |
 | Database | Amazon DynamoDB |
-| Development Environment | Visual Studio Code |
+| IDE | Visual Studio Code |
+
+---
+
+## ☁️ AWS Services Used
+
+- **Amazon S3** – Static website hosting
+- **AWS Lambda** – Serverless backend for order processing
+- **Amazon API Gateway** – REST API integration
+- **Amazon DynamoDB** – Storage for menu and order information
+
+---
+
+## 🏗️ System Architecture
+
+```text
+             Customer
+                 │
+                 ▼
+      Amazon S3 Static Website
+                 │
+                 ▼
+         Amazon API Gateway
+                 │
+                 ▼
+           AWS Lambda Function
+                 │
+                 ▼
+         Amazon DynamoDB Tables
+         ├── MenuTable
+         └── OrdersTable
+```
 
 ---
 
@@ -44,7 +82,7 @@ The project demonstrates the use of AWS serverless services to build and deploy 
 ```text
 AURA-Restaurant-Ordering-System/
 │
-├── frontend/
+├── web/
 │   ├── index.html
 │   ├── admin.html
 │   ├── billing.html
@@ -55,7 +93,7 @@ AURA-Restaurant-Ordering-System/
 │   ├── style.css
 │   └── *.js
 │
-├── backend/
+├── lambda/
 │   └── placeOrderFunction.js
 │
 ├── screenshots/
@@ -69,47 +107,55 @@ AURA-Restaurant-Ordering-System/
 
 ## ⚙️ Workflow
 
-1. Customers access the restaurant website.
-2. Users choose online or offline ordering.
-3. Orders are processed through AWS Lambda.
-4. Menu and order details are stored in Amazon DynamoDB.
-5. API Gateway manages communication between the frontend and backend.
+1. Customer accesses the restaurant website hosted on Amazon S3.
+2. The customer selects online or offline ordering.
+3. API Gateway receives requests from the frontend.
+4. AWS Lambda processes menu retrieval and order placement.
+5. Order and menu data are stored in Amazon DynamoDB.
 6. Restaurant staff manage orders through dedicated dashboards.
-7. The application is hosted using Amazon S3 Static Website Hosting.
-
----
-
-## ☁️ AWS Services Used
-
-- **Amazon S3** – Static website hosting
-- **AWS Lambda** – Serverless backend logic
-- **Amazon API Gateway** – REST API integration
-- **Amazon DynamoDB** – Menu and order data storage
+7. The application delivers a complete serverless restaurant management workflow.
 
 ---
 
 ## 📊 Project Highlights
 
-- Serverless cloud architecture
-- AWS-based deployment
-- Role-based restaurant management
-- Responsive user interface
-- REST API integration
-- Cloud-hosted web application
+- Cloud-native serverless architecture
+- Static website hosting using Amazon S3
+- RESTful API integration with API Gateway
+- Serverless backend using AWS Lambda
+- NoSQL database using Amazon DynamoDB
+- Role-based restaurant management system
+- Modular frontend using HTML, CSS, and JavaScript
 
 ---
 
 ## 🎯 Learning Outcomes
 
-This project demonstrates:
+This project demonstrates practical knowledge of:
 
 - Cloud Computing with AWS
 - Serverless Application Development
+- REST API Development
 - Static Website Hosting
-- REST API Integration
-- Database Management with DynamoDB
+- NoSQL Database Management
 - Frontend Web Development
 - Role-Based System Design
+- Cloud Deployment
+
+---
+
+## 📷 Screenshots
+
+Project screenshots can be found in the **screenshots/** directory.
+
+Example screenshots include:
+
+- Home Page
+- Customer Interface
+- Admin Dashboard
+- Chef Dashboard
+- Waiter Dashboard
+- Billing Dashboard
 
 ---
 
@@ -118,9 +164,10 @@ This project demonstrates:
 - User authentication and authorization
 - Online payment gateway integration
 - Real-time order tracking
-- Customer notifications
+- Push notifications
+- Customer order history
+- Mobile-friendly interface
 - Analytics dashboard
-- Mobile application support
 
 ---
 
@@ -128,7 +175,7 @@ This project demonstrates:
 
 **Bommisetty Nikhita**
 
-B.Tech Computer Science (Artificial Intelligence)
+B.Tech – Computer Science (Artificial Intelligence)
 
 Amrita Vishwa Vidyapeetham
 
@@ -139,3 +186,7 @@ Amrita Vishwa Vidyapeetham
 This project is licensed under the MIT License.
 
 ---
+
+## ⭐ Support
+
+If you found this project useful, consider giving this repository a ⭐ on GitHub.
