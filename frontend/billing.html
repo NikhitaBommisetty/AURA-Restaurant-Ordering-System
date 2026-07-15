@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing Dashboard | AURA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">AURA.</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Customer</a></li>
+            <li><a href="chef.html">Chef</a></li>
+            <li><a href="waiter.html">Waiter</a></li>
+            <li><a href="billing.html" class="active">Billing</a></li>
+            <li><a href="admin.html">Admin</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN -->
+    <div class="container">
+
+        <!-- HEADER -->
+        <div class="header-section">
+            <h1>Billing Dashboard</h1>
+
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+
+                <!-- STATUS -->
+                <div
+                    style="color: var(--primary-color); font-weight:600; display:flex; align-items:center; gap:0.5rem;">
+                    <div class="pulse-dot"></div> Ready for Billing
+                </div>
+
+                <!-- LEGEND -->
+                <div style="display:flex; gap:1rem; font-size:0.9rem;">
+                    <span class="status status-pending">Online (Ready)</span>
+                    <span class="status status-completed">Offline (Served)</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- BILLING GRID -->
+        <div class="grid" id="billing-grid">
+            <!-- Orders injected here -->
+        </div>
+
+        <!-- EMPTY STATE -->
+        <div id="billing-empty" style="text-align:center; margin-top:2rem; color:var(--text-muted); display:none;">
+            No orders pending for billing 💸
+        </div>
+
+    </div>
+
+    <script src="billing_app.js"></script>
+</body>
+
+</html>

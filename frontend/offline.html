@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline Dine-in | AURA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-order-type="Offline">
+
+    <nav class="navbar">
+        <div class="logo">AURA.</div>
+        <ul class="nav-links">
+            <li><a href="index.html">← Back</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="header-section">
+            <h1>Offline Dine-in Order</h1>
+        </div>
+
+        <div class="split-layout">
+
+            <!-- LEFT -->
+            <div>
+
+                <!-- TABLE -->
+                <div class="card" style="margin-bottom: 2rem;">
+                    <label>Table Number *</label>
+                    <input type="number" id="tableNumber" placeholder="Enter table number">
+                </div>
+
+                <h2>Menu Items</h2>
+
+                <!-- ✅ DYNAMIC MENU -->
+                <div class="menu-grid" id="menu-container"></div>
+
+            </div>
+
+            <!-- RIGHT CART -->
+            <div class="cart-panel" style="position: sticky; top: 100px;">
+                <h2 style="font-size: 1.25rem;">Your Cart</h2>
+
+                <div class="cart-items" id="cart-container">
+                    <div class="empty-cart-msg">Cart is empty...</div>
+                </div>
+
+                <div style="display: flex; justify-content: space-between; font-size: 1.25rem; font-weight: 700; margin-bottom: 1.5rem;">
+                    <span>Total:</span>
+                    <span style="color: var(--primary-color);">₹<span id="cart-total">0</span></span>
+                </div>
+
+                <button id="place-order-btn" class="btn btn-success" style="width: 100%; display: flex; justify-content: center; align-items: center; gap: 0.5rem;" disabled>
+                    <span id="btn-text">Place Order</span>
+                    <div id="btn-loader" class="loader" style="display: none;"></div>
+                </button>
+
+                <div id="msg-box" class="message-box"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="ordering.js"></script>
+</body>
+
+</html>

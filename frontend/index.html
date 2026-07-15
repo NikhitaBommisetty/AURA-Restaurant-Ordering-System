@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Ordering System | AURA</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .split-buttons {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-large {
+            padding: 1.5rem 3rem;
+            font-size: 1.25rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">AURA.</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Ordering system</a></li>
+            <li><a href="chef.html">Chef</a></li>
+            <li><a href="waiter.html">Waiter</a></li>
+            <li><a href="billing.html">Billing</a></li>
+            <li><a href="admin.html">Admin</a></li>
+        </ul>
+    </nav>
+    <div class="container"
+        style="display: flex; justify-content: center; align-items: center; min-height: 70vh; flex-direction: column;">
+        <h1 class="dashboard-header-text" style="font-size: 3.5rem; text-align: center; margin-bottom: 1rem;">Choose
+            Order Type</h1>
+        <p style="color: var(--text-muted); font-size: 1.2rem; text-align: center;">Select how you wish to dine with
+            AURA.</p>
+
+        <div class="split-buttons">
+            <button class="btn btn-large" onclick="window.location.href='online.html'">Order Online</button>
+            <button class="btn btn-large"
+                style="background: transparent; border: 2px solid var(--primary-color); color: var(--primary-color);"
+                onclick="window.location.href='offline.html'">Order Offline</button>
+        </div>
+    </div>
+</body>
+
+</html>

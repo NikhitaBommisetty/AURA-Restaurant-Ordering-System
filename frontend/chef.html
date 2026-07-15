@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef Dashboard | AURA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">AURA.</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Customer</a></li>
+            <li><a href="chef.html" class="active">Chef</a></li>
+            <li><a href="waiter.html">Waiter</a></li>
+            <li><a href="billing.html">Billing</a></li>
+            <li><a href="admin.html">Admin</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="header-section">
+            <h1>Chef Dashboard</h1>
+            <div style="color: var(--success); font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">
+                <div class="pulse-dot"></div> Auto-refresh Active
+            </div>
+        </div>
+
+        <!-- ✅ FILTER BUTTONS (ADDED) -->
+        <div class="filter-container">
+            <button onclick="setFilter('All')">All</button>
+            <button onclick="setFilter('Online')">Online</button>
+            <button onclick="setFilter('Offline')">Offline</button>
+            <button onclick="setFilter('Ready')">Ready</button>
+        </div>
+
+        <div class="grid" id="orders-grid">
+            <!-- Javascript injects tickets here -->
+        </div>
+    </div>
+
+    <script src="chef_app.js"></script>
+</body>
+
+</html>

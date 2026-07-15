@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waiter Dashboard | AURA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">AURA.</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Customer</a></li>
+            <li><a href="chef.html">Chef</a></li>
+            <li><a href="waiter.html" class="active">Waiter</a></li>
+            <li><a href="billing.html">Billing</a></li>
+            <li><a href="admin.html">Admin</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <!-- HEADER -->
+        <div class="header-section">
+            <h1>Waiter Dashboard</h1>
+
+            <div
+                style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+
+                <!-- STATUS INDICATOR -->
+                <div style="color: var(--success); font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">
+                    <div class="pulse-dot"></div> Live Serving
+                </div>
+
+                <!-- LEGEND -->
+                <div style="display: flex; gap: 1rem; font-size: 0.9rem;">
+                    <span class="status status-pending">Ready</span>
+                    <span class="status"
+                        style="background: rgba(59,130,246,0.2); color:#3B82F6; border:1px solid #3B82F6;">Serving</span>
+                    <span class="status status-completed">Served</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- GRID -->
+        <div class="grid" id="waiter-grid">
+            <!-- JS injects orders -->
+        </div>
+
+        <!-- EMPTY STATE -->
+        <div id="waiter-empty" style="text-align:center; margin-top:2rem; color:var(--text-muted); display:none;">
+            No orders to serve 🍽️
+        </div>
+
+    </div>
+
+    <script src="waiter_app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | AURA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">AURA.</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Customer</a></li>
+            <li><a href="chef.html">Chef</a></li>
+            <li><a href="waiter.html">Waiter</a></li>
+            <li><a href="billing.html">Billing</a></li>
+            <li><a href="admin.html" class="active">Admin</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <!-- HEADER -->
+        <div class="header-section">
+            <h1>Admin Dashboard</h1>
+            <p style="color:var(--text-muted)">System Overview & Analytics</p>
+        </div>
+
+        <!-- STATS -->
+        <div class="grid" style="margin-bottom:2rem;">
+            <div class="card">
+                <h3>Total Orders</h3>
+                <p id="total-orders">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Revenue</h3>
+                <p id="total-revenue">₹0</p>
+            </div>
+
+            <div class="card">
+                <h3>Pending</h3>
+                <p id="pending-count">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Completed</h3>
+                <p id="completed-count">0</p>
+            </div>
+        </div>
+
+        <!-- FILTER -->
+        <div class="filter-container">
+            <button onclick="setFilter('All')">All</button>
+            <button onclick="setFilter('Pending')">Pending</button>
+            <button onclick="setFilter('Ready')">Ready</button>
+            <button onclick="setFilter('Serving')">Serving</button>
+            <button onclick="setFilter('Billing')">Billing</button>
+            <button onclick="setFilter('Completed')">Completed</button>
+        </div>
+
+        <!-- ORDERS -->
+        <div class="grid" id="admin-grid"></div>
+
+        <div id="admin-empty" style="text-align:center; margin-top:2rem; display:none;">
+            No data available 📊
+        </div>
+
+        <!-- ================= MENU MANAGEMENT ================= -->
+
+        <div class="header-section" style="margin-top:3rem;">
+            <h2>Menu Management</h2>
+            <p style="color:var(--text-muted)">Add / Remove Menu Items</p>
+        </div>
+
+        <!-- ADD MENU -->
+        <div class="card" style="margin-bottom:2rem;">
+            <h3>Add New Item</h3>
+
+            <input id="menu-name" placeholder="Item name" style="margin-bottom:15px; padding: 1rem; border-radius: 8px;">
+            <input id="menu-price" type="number" placeholder="Price (₹)" style="margin-bottom:20px; padding: 1rem; border-radius: 8px;">
+
+            <button class="btn btn-success" style="width: 100%; padding: 1rem; font-size: 1.1rem; text-transform: uppercase;" onclick="addMenuItem()">Add Item</button>
+        </div>
+
+        <!-- MENU LIST -->
+        <div class="grid" id="menu-grid"></div>
+
+    </div>
+
+    <script src="admin.js?v=2"></script>
+
+</body>
+
+</html>
