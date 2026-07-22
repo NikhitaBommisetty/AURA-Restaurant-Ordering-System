@@ -1,5 +1,6 @@
 # 🍽️ AURA Restaurant Ordering System
-
+![CI](https://github.com/NikhitaBommisetty/AURA-Restaurant-Ordering-System/actions/workflows/ci.yml/badge.svg)
+---
 A cloud-based restaurant ordering and management system built using **HTML**, **CSS**, and **JavaScript**, and deployed on **Amazon Web Services (AWS)**. The application utilizes **Amazon S3**, **AWS Lambda**, **Amazon API Gateway**, and **Amazon DynamoDB** to deliver a scalable, serverless solution for restaurant operations.
 
 ---
