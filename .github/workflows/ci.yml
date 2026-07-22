@@ -1,0 +1,39 @@
+name: AURA CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+
+  frontend-check:
+    name: Frontend Validation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Validate frontend files
+        run: |
+          find frontend -name "*.html"
+          find frontend -name "*.js"
+
+
+  backend-check:
+    name: Backend Validation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Check Lambda syntax
+        run: |
+          node --check backend/placeOrderFunction.js

@@ -186,7 +186,3 @@ Amrita Vishwa Vidyapeetham
 This project is licensed under the MIT License.
 
 ---
-
-## ⭐ Support
-
-If you found this project useful, consider giving this repository a ⭐ on GitHub.
